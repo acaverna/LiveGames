@@ -13,7 +13,7 @@ header {
   padding: 4px;
 }
 
-header>div {
+header > div {
   flex-grow: 1;
 }
 
@@ -96,25 +96,24 @@ header>div {
   height: 50px;
   margin: 15px auto;
   font-weight: bold;
-  color: #FFF;
+  color: #fff;
   font-size: 25px;
   border: none;
   border-radius: 15px;
-  cursor: url("../images/m_chinela_verde.png"),
-    auto;
+  cursor: url("../images/m_chinela_verde.png"), auto;
   outline: none;
 }
 
 .btn-easy {
-  background-color: #0F0;
+  background-color: #0f0;
 }
 
 .btn-easy:hover {
-  background-color: #0C0;
+  background-color: #0c0;
 }
 
 .btn-normal {
-  background-color: #CCC;
+  background-color: #ccc;
 }
 
 .btn-normal:hover {
@@ -122,11 +121,11 @@ header>div {
 }
 
 .btn-hard {
-  background-color: #F00;
+  background-color: #f00;
 }
 
 .btn-hard:hover {
-  background-color: #C00;
+  background-color: #c00;
 }
 
 .cigarra-derrota {
