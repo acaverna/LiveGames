@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexyca The Game</title>
+    <link rel="stylesheet" href="../css/levxyca.css" />
+  </head>
+  <body onmousemove="trackMouse(event)">
+    <header>
+      <div class="counter">Pontos: <span class="counterNumber">0</span></div>
+    </header>
+
+    <div id="menu" class="menu">
+      <div class="menu-content content">
+        <h1>Escolha o dificuldade do jogo</h1>
+        <button class="btn-nivel btn-easy" id="easy">Python</button>
+        <button class="btn-nivel btn-normal" id="normal">PHP</button>
+        <button class="btn-nivel btn-hard" id="hard">DENO</button>
+      </div>
+    </div>
+    <img src="../images/cabeca_levxyca.png" alt="Lexyca" class="levxyca" />
+
+    <audio id="levxyca-audio">
+      <source src="../audio/levxycaMusica.mp3" type="audio/mp3" />
+    </audio>
+
+    <script src="../js/levxyca.js"></script>
+  </body>
+</html>
