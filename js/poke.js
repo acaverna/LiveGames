@@ -55,9 +55,9 @@ function damagePoke() {
     const damage = Math.floor(Math.random() * maxDamage);
 
     if (damage != 0) {
-      chanceDamage
+      chanceDamage;
       lifePoke -= damage;
-      
+
       if (lifePoke <= 0) {
         status = false;
         music.pause();
@@ -95,18 +95,18 @@ function showCigarra() {
   );
 }
 
-btnsNivel.forEach(btn => {
+btnsNivel.forEach((btn) => {
   btn.addEventListener("click", () => {
     nivel = btn.getAttribute("id");
 
     if (nivel == "easy") {
-      chanceDamage = 0.30;
+      chanceDamage = 0.3;
       maxDamage = 10;
     } else if (nivel == "normal") {
-      chanceDamage = 0.50;
+      chanceDamage = 0.5;
       maxDamage = 15;
     } else {
-      chanceDamage = 0.70;
+      chanceDamage = 0.7;
       maxDamage = 20;
     }
 
