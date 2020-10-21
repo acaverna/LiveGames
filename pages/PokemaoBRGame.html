@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PokemaoBRGame</title>
-    <link rel="stylesheet" href="../css/poke.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="life-poke">
-        <label for="">Vida Pokemao</label>
-        <div class="life-bar"></div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokemaoBRGame</title>
+  <link rel="stylesheet" href="../css/poke.css" />
+</head>
 
-      <div class="points-panel">Pontos: <span id="points-panel">0</span></div>
-    </header>
+<body>
+  <div id="menu" class="menu">
+    <div class="menu-content content">
+      <h1>Escolha o dificuldade do jogo</h1>
+      <button class="btn-nivel btn-easy" id="easy">Python</button>
+      <button class="btn-nivel btn-normal" id="normal">PHP</button>
+      <button class="btn-nivel btn-hard" id="hard">DENO</button>
+    </div>
 
-    <div class="message">Poke sofre <span id="damage"></span> de dano</div>
+    <div class="derrota-content content">
+      <h1>A cigarra pegou o poke</h1>
+      <img class="cigarra-derrota" src="../images/cigarra.png" alt="imagem da cigarra">
+      <p>
+        Você fez <span class="total-points"></span> pontos
+      </p>
+      <button class="btn-nivel btn-easy replay">Jogar Novamente</button>
+    </div>
+  </div>
 
-    <img class="cigarra" src="../images/cigarra.png" alt="imagem cigarra" />
+  <header>
+    <div class="life-poke">
+      <label for="">Vida Pokemao</label>
+      <div class="life-bar"></div>
+    </div>
 
-    <img src="../images/poke_normal.png" class="poke" alt="" />
+    <div class="points-panel">Pontos: <span id="points-panel">0</span></div>
+  </header>
 
-    <audio id="soco">
-      <source src="../audio/soco.mp3" type="audio/mp3" />
-    </audio>
+  <div class="message">Poke sofre <span id="damage"></span> de dano</div>
 
-    <audio id="cigarra-audio">
-      <source src="../audio/cigarra.mp3" type="audio/mp3" />
-    </audio>
+  <img class="cigarra" src="../images/cigarra.png" alt="imagem cigarra" />
 
-    <audio id="poke-audio">
-      <source src="audio/pokeMusica.mp3" type="audio/mp3" autoplay />
-    </audio>
+  <img src="../images/poke_normal.png" class="poke" alt="" />
 
-    <script src="../js/poke.js"></script>
-  </body>
+  <audio id="soco">
+    <source src="../audio/soco.mp3" type="audio/mp3" />
+  </audio>
+
+  <audio id="cigarra-audio">
+    <source src="../audio/cigarra.mp3" type="audio/mp3" />
+  </audio>
+
+  <audio id="poke-audio">
+    <source src="../audio/pokeMusica.mp3" type="audio/mp3" />
+  </audio>
+
+  <script src="../js/poke.js"></script>
+</body>
+
 </html>

@@ -7,11 +7,22 @@ const audio = document.querySelector("#soco");
 const audioCigarra = document.querySelector("#cigarra-audio");
 const poke = document.querySelector(".poke");
 const html = document.getElementsByTagName("html")[0];
+const btnsNivel = document.querySelectorAll(".btn-nivel");
+const menu = document.querySelector("#menu");
+const replay = document.querySelector(".replay");
+const contentMenu = document.querySelector(".menu-content");
+const contentDerrota = document.querySelector(".derrota-content");
+const music = document.querySelector("#poke-audio");
+const totalPoints = document.querySelector(".total-points");
 
+let nivel = "";
+let maxDamage = 0;
+let chanceDamage = 0;
 let screenWidth = screen.width;
 let screenHeight = screen.height;
 let points = 0;
 let lifePoke = 100;
+let status = true;
 
 cigarra.addEventListener("click", () => {
   audio.play();
@@ -29,6 +40,7 @@ cigarra.addEventListener("click", () => {
   if (points === 700) {
     html.style.cursor = "url('../images/m_chinela_marrom.png'), auto";
   }
+
   if (points === 1100) {
     html.style.cursor = "url('../images/m_chinela_preta.png'), auto";
   }
@@ -39,16 +51,21 @@ cigarra.addEventListener("click", () => {
 });
 
 function damagePoke() {
-  if (Math.random() < 0.3) {
-    const damage = Math.floor(Math.random() * 10);
+  if (Math.random() < chanceDamage) {
+    const damage = Math.floor(Math.random() * maxDamage);
 
     if (damage != 0) {
+      chanceDamage
       lifePoke -= damage;
-
-      if (lifePoke < 0) {
-        alert("Você perdeu o jogo");
-        location.reload();
+      
+      if (lifePoke <= 0) {
+        status = false;
+        music.pause();
+        totalPoints.innerText = points;
+        menu.style.display = "block";
         audioCigarra.play();
+        contentDerrota.style.display = "block";
+        contentMenu.style.display = "none";
       }
 
       lifeBar.style.width = `${lifePoke}%`;
@@ -78,9 +95,38 @@ function showCigarra() {
   );
 }
 
-showCigarra();
+btnsNivel.forEach(btn => {
+  btn.addEventListener("click", () => {
+    nivel = btn.getAttribute("id");
 
-setInterval(() => {
-  damagePoke();
-  showCigarra();
-}, 3000);
+    if (nivel == "easy") {
+      chanceDamage = 0.30;
+      maxDamage = 10;
+    } else if (nivel == "normal") {
+      chanceDamage = 0.50;
+      maxDamage = 15;
+    } else {
+      chanceDamage = 0.70;
+      maxDamage = 20;
+    }
+
+    music.play();
+
+    menu.style.display = "none";
+
+    showCigarra();
+
+    setInterval(() => {
+      if (status) {
+        damagePoke();
+        showCigarra();
+      }
+    }, 3000);
+  });
+});
+
+replay.addEventListener("click", () => {
+  location.reload();
+});
+
+menu.style.display = "block";
