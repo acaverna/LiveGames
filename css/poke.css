@@ -1,49 +1,68 @@
 html {
-    /* background-image: url('../images/parede.jpg'); */
-    height: 100%;
-    cursor: url('../images/m_chinela.png'), auto;
+  /* background-image: url('../images/parede.jpg'); */
+  height: 100%;
+  cursor: url("../images/m_chinela_verde.png"), auto;
+  background-image: url(../images/azulejo.jpeg);
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
 }
 
 header {
-    display: flex;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 4px;
 }
 
 header > div {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .cursor {
-    width: 80px;
-    position: relative;
+  width: 80px;
+  position: relative;
 }
 
 .cigarra {
-    width: 80px;
-    top: 300px;
-    left: 400px;
-    position: relative;
+  width: 80px;
+  top: 300px;
+  left: 400px;
+  position: relative;
 }
 
 .points-panel {
-    font-weight: bold;
+  font-weight: bold;
+  font-size: 3ch;
 }
 
 .life-poke {
-    font-weight: bold;
-    width: 20%;
+  font-weight: bold;
+  width: 20%;
 }
 
 .life-bar {
-    height: 30px;
-    background-color: #0F0;
-    margin-right: 50px;
+  height: 30px;
+  background-color: #0f0;
+  margin-right: 50px;
+  border-radius: 10px;
 }
 
 .message {
-    font-weight: bold;
-    background-color: #F005;
-    text-align: center;
-    margin-right: 50px;
-    margin-left: 50px;
-    display: none;
+  font-weight: bold;
+  width: 90%;
+  height: 5vh;
+  background-color: #f005;
+  color: white;
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+  margin-right: 50px;
+  margin-left: 50px;
+  display: none;
+}
+
+.poke {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 10em;
 }
