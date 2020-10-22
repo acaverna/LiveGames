@@ -2,7 +2,7 @@ html {
   /* background-image: url('../images/parede.jpg'); */
   height: 100%;
   cursor: url("../images/m_chinela_verde.png"), auto;
-  background-image: url(../images/azulejo.jpeg);
+  background-image: url("../images/azulejo.jpeg");
   font-family: Arial, Helvetica, sans-serif;
   color: black;
 }
