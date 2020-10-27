@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TigerGame</title>
+    <link rel="stylesheet" href="../css/tiger.css" />
+  </head>
+
+  <body>
+    <div id="menu" class="menu">
+      <div class="menu-content content">
+        <h1>Escolha o dificuldade do jogo</h1>
+        <button class="btn-nivel btn-easy" id="easy">Python</button>
+        <button class="btn-nivel btn-normal" id="normal">PHP</button>
+        <button class="btn-nivel btn-hard" id="hard">DENO</button>
+      </div>
+
+      <div class="derrota-content content">
+        <h1>Tiger ficou doente de tanto dançar</h1>
+        <img
+          class="tiger-derrota"
+          src="../images/tiger.png"
+          alt="imagem do tiger"
+        />
+        <p>Você fez <span class="total-points"></span> pontos</p>
+        <button class="btn-nivel btn-easy replay">Jogar Novamente</button>
+      </div>
+    </div>
+
+    <header>
+      <div class="points-panel">Pontos: <span id="points-panel">0</span></div>
+    </header>
+
+    <div class="message">Tiger sofre <span id="damage"></span> de dano</div>
+
+    <img class="tiger" src="../images/tiger.png" alt="imagem tiger" />
+
+    <audio id="tiger-music" autoplay loop>
+      <source src="../audio/musica-tiger.mp3" type="audio/mp3" />
+    </audio>
+
+    <script src="../js/tiger.js"></script>
+  </body>
+</html>
