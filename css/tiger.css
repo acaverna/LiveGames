@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../images/fundo-tiger.jpeg");
+}
+
+@keyframes moveapple {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(600%);
+  }
+}
+
+.tiger {
+  width: 100px;
+  position: relative;
+  --x: 0px;
+  --y: 400px;
+  --rotateX: 0;
+  --rotate: 0;
+  transform: translateX(var(--x)) translateY(var(--y)) rotateY(var(--rotateX))
+    rotate(var(--rotate));
+  transition: transform 0.2s;
+}
+.fish {
+  width: 100px;
+  position: relative;
+  --x: 0px;
+  --y: 0px;
+  --rotateX: 0;
+  --rotate: 0;
+  transform: translateX(var(--x)) translateY(var(--y)) rotateY(var(--rotateX))
+    rotate(var(--rotate));
+  transition: transform 0.2s;
+  animation: 1.5s ease-out 0s 1 moveapple;
+}
+header {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 4px;
+}
+
+header > div {
+  flex-grow: 1;
+}
+
+.cursor {
+  width: 80px;
+  position: relative;
+}
+
+.point {
+  width: 80px;
+  top: 300px;
+  left: 400px;
+  position: relative;
+}
+
+.points-panel {
+  font-weight: bold;
+  font-size: 3ch;
+}
+
+.life-tiger {
+  font-weight: bold;
+  width: 20%;
+}
+
+.life-bar {
+  height: 30px;
+  background-color: #0f0;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+
+.message {
+  font-weight: bold;
+  width: 90%;
+  height: 5vh;
+  background-color: #f005;
+  color: white;
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+  margin-right: 50px;
+  margin-left: 50px;
+  display: none;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  text-align: center;
+}
+
+.btn-nivel {
+  display: block;
+  width: 250px;
+  height: 50px;
+  margin: 15px auto;
+  font-weight: bold;
+  color: #fff;
+  font-size: 25px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}
+
+.btn-easy {
+  background-color: #0f0;
+}
+
+.btn-easy:hover {
+  background-color: #0c0;
+}
+
+.btn-normal {
+  background-color: #ccc;
+}
+
+.btn-normal:hover {
+  background-color: #999;
+}
+
+.btn-hard {
+  background-color: #f00;
+}
+
+.btn-hard:hover {
+  background-color: #c00;
+}
+
+.tiger-derrota {
+  width: 150px;
+}
+
+.total-points {
+  font-weight: bold;
+}
+
+.derrota-content {
+  display: none;
+}

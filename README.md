@@ -1,6 +1,5 @@
 # LiveGames
 
-
 # Apresentação
 
 <center>
@@ -11,9 +10,9 @@ Projeto para games sobre o universo de live coding na twitch
 
 ## Tecnologias
 
-* HTML
-* Css
-* Js
+- HTML
+- Css
+- Js
 
 # Como Contribuir?
 
