@@ -1,16 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
 body {
-  background-color: #fdfdfd;
+  background-color: #FDFDFD;
 }
-h1,
-h2,
-h3,
-h4,
-nav a {
-  font-family: "Press Start 2P";
+h1,h2,h3,h4,nav a{
+  font-family: 'Press Start 2P';
 }
-nav {
+nav{
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -18,7 +14,7 @@ nav {
   align-items: center;
   text-align: center;
 }
-nav a {
+nav a{
   min-width: 35%;
   padding: 16px 0;
   border-radius: 13px;
@@ -31,21 +27,21 @@ nav a {
   font-size: 16px;
   margin: 23px auto;
 }
-nav a img {
+nav a img{
   width: 10%;
   margin-right: 13px;
 }
-a.github {
-  background-color: #24292e;
+a.github{
+  background-color:#24292e;
 }
-.games {
+.games{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.games .game {
+.games .game{
   background-color: aqua;
   filter: brightness(90%);
   width: 30%;
@@ -57,10 +53,10 @@ a.github {
   cursor: pointer;
   transition: 0.2s;
 }
-.games .game:hover {
+.games .game:hover{
   filter: brightness(60%);
 }
-.games .game a {
+.games .game a{
   color: #000;
   text-decoration: none;
 }
